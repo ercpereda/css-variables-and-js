@@ -30,8 +30,8 @@
     var inputsRange = document.querySelectorAll('input[type="range"]');
     inputsRange.forEach(input => input.addEventListener('mousemove', handleUpdate));
 
-    var inputColor = document.querySelector('input[type="color"]');
-    inputColor.addEventListener('change', handleUpdate);
+    var inputs = document.querySelectorAll('input');
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));
   </script>
 </body>
 </html>
