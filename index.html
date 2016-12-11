@@ -20,5 +20,18 @@
   </div>
 
   <img src="http://unsplash.it/800/500?image=899">
+
+  <script>
+    function handleUpdate() {
+      const suffix = this.dataset.sizing || '';
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+
+    var inputsRange = document.querySelectorAll('input[type="range"]');
+    inputsRange.forEach(input => input.addEventListener('mousemove', handleUpdate));
+
+    var inputColor = document.querySelector('input[type="color"]');
+    inputColor.addEventListener('change', handleUpdate);
+  </script>
 </body>
 </html>
